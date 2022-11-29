@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: black;
+    min-height: 100vh;
+}
+/*Esto es el header*/
+.nav{
+    background: darkblue;
+    height: 80px;
+    color: white;
+}
+.nav__container{
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__logo{
+    font-size: 1.5em;
+    font-weight: 900;
+}
+.nav__menu{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3em;
+}
+.nav__menu a:hover{
+    color: violet;
+}
+.nav__item{
+    color: white;
+    text-decoration: none;
+}
+.nav__label, .nav__input{
+    display: none;
+}
+@media (max-width:800px){
+    .nav__label{
+        display: block;
+        cursor: pointer;
+    }
+    .nav__menu{
+        position: fixed;
+        top: 80px;
+        bottom: 0;
+        background: violet;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 0.5s ease-in-out;
+    }
+    .nav__input:checked + .nav__menu{
+        clip-path: circle(100% at center);
+    }
+}
+/*esto es el contenido de la pagina*/
+#portada{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#portada img{
+    border: solid violet 10px;
+    border-radius: 10%;
+    margin: 10px;
+}
+#portada h3{
+    color: white;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+/*aca pongo el css del formulario*/
+form{
+    width: 420px;
+    margin: auto;
+    background: violet;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+#f-titulo{
+    color: black;
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+input, textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+}
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+#boton{
+    background: darkblue;
+    color: white;
+    padding: 20px;
+}
+#boton:hover{
+    cursor: pointer;
+}
+@media (max-width:480px){
+    form{
+        width: 100%;
+    }
+}
+/*esto es el footer*/
+.footer{
+    background-color: darkblue;
+    position: sticky;
+    top: 100%;
+    width: 100%;
+}
+.footer ul li a{
+    color: white;
+    margin-left: 1em;
+}
+.footer ul li a:hover{
+    color: violet;
+}

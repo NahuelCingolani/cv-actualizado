@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="nav__container">
+                <h1>Cingolani</h1>
+                <label for="menu" class="nav__label">
+                    <img src="images/menu.svg" alt="menucito">
+                </label>
+                <input type="checkbox" id="menu" class="nav__input">
+                <div class="nav__menu">
+                    <a href="index.html" class="nav__item"><p>Home</p></a>
+                    <a href="contacto.html" class="nav__item"><p>Contacto</p></a>
+                    <a href="sobre-mi.html" class="nav__item"><p>Sobre Mí</p></a>
+                    <a href="formacion.html" class="nav__item"><p>Experiencia</p></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="portada">
+            <img src="images/Nahuel.jpg" width="240px" height="240px" alt="nahuel-cingolani">
+            <h3>Nahuel Cingolani</h3>
+        </div>
+        <div>
+            <form action="">
+                <h2 id="f-titulo">Contacto</h2>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <input type="text" name="correo" id="correo" placeholder="Correo">
+                <input type="text" name="telefono" id="telefono" placeholder="Teléfono">
+                <textarea name="mensaje" placeholder="Escriba aqui su mensaje."></textarea>
+                <input type="submit" onclick="return enviarformulario()" value="ENVIAR" id="boton">
+            </form>
+            <div id="error"></div>
+            <script src="validacion.js"></script>
+        </div>
+    </main>
+    <footer class="footer">
+        <ul>
+            <li><a href="https://twitter.com">Twitter</a></li>
+            <li><a href="https://instagram.com">Instagram</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
