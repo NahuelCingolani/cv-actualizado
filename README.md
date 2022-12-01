@@ -1,1 +1,1 @@
-# cv-actualizado https://github.com/NahuelCingolani/cv-actualizado
+# cv-actualizado: https://nahuelcingolani.github.io/cv-actualizado/
